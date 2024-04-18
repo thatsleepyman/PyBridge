@@ -31,3 +31,5 @@
 2024-04-18 17:14:36,090 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:36] "[33mPOST /toggle/enabled_script_2 HTTP/1.1[0m" 404 -
 2024-04-18 17:14:36,689 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:36] "[33mPOST /toggle/disabled_script_1 HTTP/1.1[0m" 404 -
 2024-04-18 17:14:37,101 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:37] "[33mPOST /toggle/disabled_script_2 HTTP/1.1[0m" 404 -
+2024-04-18 17:17:12,723 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:17:12] "[33mPOST /toggle/disabled_script_2 HTTP/1.1[0m" 404 -
+2024-04-18 17:17:54,060 INFO in werkzeug:  * Detected change in 'd:\\Code\\Bowser_the_PyRocess_Browser\\Bowser.py', reloading

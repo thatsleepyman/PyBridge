@@ -13,3 +13,5 @@
 2024-04-18 17:10:34,599 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:10:34] "[33mPOST /toggle_script HTTP/1.1[0m" 404 -
 2024-04-18 17:11:00,523 INFO in werkzeug:  * Detected change in 'd:\\Code\\Bowser_the_PyRocess_Browser\\Bowser.py', reloading
 2024-04-18 17:11:00,559 INFO in werkzeug:  * Restarting with stat
+2024-04-18 17:17:54,102 INFO in werkzeug:  * Restarting with stat
+2024-04-18 17:17:57,376 INFO in werkzeug:  * Restarting with stat

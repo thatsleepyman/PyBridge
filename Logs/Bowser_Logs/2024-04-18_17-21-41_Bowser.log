@@ -1,0 +1,8 @@
+2024-04-18 17:21:41,114 WARNING in werkzeug:  * Debugger is active!
+2024-04-18 17:21:41,117 INFO in werkzeug:  * Debugger PIN: 988-201-607
+2024-04-18 17:21:42,677 INFO in root: [2024-04-18 17:21:42] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:21:42,677 INFO in root: Displayed directory list
+2024-04-18 17:21:42,679 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:21:42] "GET / HTTP/1.1" 200 -
+2024-04-18 17:21:45,415 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:21:45] "[35m[1mPOST /toggle/enabled_script_1 HTTP/1.1[0m" 500 -
+2024-04-18 17:23:33,258 INFO in werkzeug:  * Detected change in 'd:\\Code\\Bowser_the_PyRocess_Browser\\Bowser.py', reloading

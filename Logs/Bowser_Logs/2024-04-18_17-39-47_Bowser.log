@@ -1,0 +1,15 @@
+2024-04-18 17:39:47,028 INFO in werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-18 17:39:47,028 INFO in werkzeug: [33mPress CTRL+C to quit[0m
+2024-04-18 17:39:47,030 INFO in werkzeug:  * Restarting with stat
+2024-04-18 17:39:47,172 WARNING in werkzeug:  * Debugger is active!
+2024-04-18 17:39:47,174 INFO in werkzeug:  * Debugger PIN: 988-201-607
+2024-04-18 17:39:48,570 INFO in root: [2024-04-18 17:39:48] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:39:48,570 INFO in root: Displayed directory list
+2024-04-18 17:39:48,572 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:39:48] "GET / HTTP/1.1" 200 -
+2024-04-18 17:39:49,380 INFO in root: Moving script folder enabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:39:49,380 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:39:49,380 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:39:49,380 ERROR in root: File not found error: [Errno 2] No such file or directory: 'd:\\Code\\Bowser_the_PyRocess_Browser\\PyRocesses\\Disabled\\enabled_script_1'
+2024-04-18 17:39:49,380 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:39:49] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -

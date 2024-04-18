@@ -1,0 +1,41 @@
+2024-04-18 17:32:20,306 INFO in werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-18 17:32:20,307 INFO in werkzeug: [33mPress CTRL+C to quit[0m
+2024-04-18 17:32:20,308 INFO in werkzeug:  * Restarting with stat
+2024-04-18 17:32:20,446 WARNING in werkzeug:  * Debugger is active!
+2024-04-18 17:32:20,448 INFO in werkzeug:  * Debugger PIN: 988-201-607
+2024-04-18 17:32:22,649 INFO in root: [2024-04-18 17:32:22] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:32:22,649 INFO in root: Displayed directory list
+2024-04-18 17:32:22,651 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:32:22] "GET / HTTP/1.1" 200 -
+2024-04-18 17:32:24,196 INFO in root: [2024-04-18 17:32:24] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:32:24,196 INFO in root: Displayed directory list
+2024-04-18 17:32:24,196 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:32:24] "GET / HTTP/1.1" 200 -
+2024-04-18 17:32:24,971 INFO in root: Moving script folder enabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Disabled\enabled_script_1
+2024-04-18 17:32:24,971 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Disabled\enabled_script_1
+2024-04-18 17:32:24,971 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Disabled\enabled_script_1
+2024-04-18 17:32:24,971 ERROR in root: File not found error: [Errno 2] No such file or directory: 'd:\\Code\\Bowser_the_PyRocess_Browser\\PyRocesses/Disabled\\enabled_script_1'
+2024-04-18 17:32:24,971 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:32:24] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:32:25,892 INFO in root: Moving script folder enabled_script_2 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Disabled\enabled_script_2
+2024-04-18 17:32:25,892 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Disabled\enabled_script_2
+2024-04-18 17:32:25,892 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Disabled\enabled_script_2
+2024-04-18 17:32:25,892 ERROR in root: File not found error: [Errno 2] No such file or directory: 'd:\\Code\\Bowser_the_PyRocess_Browser\\PyRocesses/Disabled\\enabled_script_2'
+2024-04-18 17:32:25,893 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:32:25] "POST /toggle/enabled_script_2 HTTP/1.1" 200 -
+2024-04-18 17:32:26,207 INFO in root: Moving script folder disabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Enabled\disabled_script_1
+2024-04-18 17:32:26,207 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Enabled\disabled_script_1
+2024-04-18 17:32:26,207 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Enabled\disabled_script_1
+2024-04-18 17:32:26,207 ERROR in root: File not found error: [Errno 2] No such file or directory: 'd:\\Code\\Bowser_the_PyRocess_Browser\\PyRocesses/Enabled\\disabled_script_1'
+2024-04-18 17:32:26,207 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:32:26] "POST /toggle/disabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:32:26,484 INFO in root: Moving script folder disabled_script_2 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Enabled\disabled_script_2
+2024-04-18 17:32:26,484 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Enabled\disabled_script_2
+2024-04-18 17:32:26,484 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses/Enabled\disabled_script_2
+2024-04-18 17:32:26,484 ERROR in root: File not found error: [Errno 2] No such file or directory: 'd:\\Code\\Bowser_the_PyRocess_Browser\\PyRocesses/Enabled\\disabled_script_2'
+2024-04-18 17:32:26,484 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:32:26] "POST /toggle/disabled_script_2 HTTP/1.1" 200 -
+2024-04-18 17:34:03,591 INFO in root: [2024-04-18 17:34:03] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:34:03,591 INFO in root: Displayed directory list
+2024-04-18 17:34:03,591 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:34:03] "GET / HTTP/1.1" 200 -
+2024-04-18 17:34:48,902 INFO in werkzeug:  * Detected change in 'd:\\Code\\Bowser_the_PyRocess_Browser\\Bowser.py', reloading
+2024-04-18 17:34:48,943 INFO in werkzeug:  * Restarting with stat
+2024-04-18 17:34:50,190 INFO in werkzeug:  * Restarting with stat

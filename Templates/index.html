@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowser</title>
+    <style>
+        .enabled { color: green; }
+        .disabled { color: red; }
+    </style>
 </head>
 <body>
     <h1>PyRocesses:</h1>
     <ul>
         {% for dir, status in directories.items() %}
-            <li>{{ dir }} {{ status }}</li>
+            <li>
+                {{ dir }} - <span class="{{ status }}">{{ status }}</span>
+                <button class="toggle-button" data-script="{{ dir }}" data-status="{{ status }}">Toggle</button>
+            </li>
         {% endfor %}
     </ul>
+    <script>
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const scriptName = this.getAttribute('data-script');
+                const statusElement = this.previousSibling; // Reference to the <span> element
+    
+                fetch(`/toggle/${scriptName}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ script: scriptName }),
+                })
+                .then(response => response.text())
+                .then(newStatus => {
+                    statusElement.textContent = newStatus;
+                })
+                .catch(error => console.error('Error toggling script status:', error));
+            });
+        });
+    </script>    
 </body>
 </html>
