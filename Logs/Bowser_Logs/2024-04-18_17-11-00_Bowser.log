@@ -1,0 +1,33 @@
+2024-04-18 17:11:00,706 WARNING in werkzeug:  * Debugger is active!
+2024-04-18 17:11:00,708 INFO in werkzeug:  * Debugger PIN: 988-201-607
+2024-04-18 17:11:03,307 INFO in root: [2024-04-18 17:11:03] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:11:03,307 INFO in root: Displayed directory list
+2024-04-18 17:11:03,310 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:11:03] "GET / HTTP/1.1" 200 -
+2024-04-18 17:11:29,214 INFO in root: [2024-04-18 17:11:29] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:11:29,214 INFO in root: Displayed directory list
+2024-04-18 17:11:29,216 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:11:29] "GET / HTTP/1.1" 200 -
+2024-04-18 17:11:38,075 INFO in root: [2024-04-18 17:11:38] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:11:38,075 INFO in root: Displayed directory list
+2024-04-18 17:11:38,075 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:11:38] "GET / HTTP/1.1" 200 -
+2024-04-18 17:12:56,305 INFO in root: [2024-04-18 17:12:56] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:12:56,305 INFO in root: Displayed directory list
+2024-04-18 17:12:56,307 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:12:56] "GET / HTTP/1.1" 200 -
+2024-04-18 17:12:57,697 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:12:57] "[33mPOST /toggle/enabled_script_1 HTTP/1.1[0m" 404 -
+2024-04-18 17:12:58,909 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:12:58] "[33mPOST /toggle/enabled_script_1 HTTP/1.1[0m" 404 -
+2024-04-18 17:12:59,401 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:12:59] "[33mPOST /toggle/enabled_script_1 HTTP/1.1[0m" 404 -
+2024-04-18 17:12:59,834 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:12:59] "[33mPOST /toggle/enabled_script_1 HTTP/1.1[0m" 404 -
+2024-04-18 17:13:03,247 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:13:03] "[33mPOST /toggle/enabled_script_1 HTTP/1.1[0m" 404 -
+2024-04-18 17:13:24,452 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:13:24] "[33mPOST /toggle/enabled_script_1 HTTP/1.1[0m" 404 -
+2024-04-18 17:14:32,899 INFO in root: [2024-04-18 17:14:32] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:14:32,899 INFO in root: Displayed directory list
+2024-04-18 17:14:32,900 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:32] "GET / HTTP/1.1" 200 -
+2024-04-18 17:14:32,967 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-18 17:14:34,431 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:34] "[33mPOST /toggle/enabled_script_1 HTTP/1.1[0m" 404 -
+2024-04-18 17:14:36,090 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:36] "[33mPOST /toggle/enabled_script_2 HTTP/1.1[0m" 404 -
+2024-04-18 17:14:36,689 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:36] "[33mPOST /toggle/disabled_script_1 HTTP/1.1[0m" 404 -
+2024-04-18 17:14:37,101 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:14:37] "[33mPOST /toggle/disabled_script_2 HTTP/1.1[0m" 404 -

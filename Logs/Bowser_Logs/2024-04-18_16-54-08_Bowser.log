@@ -1,0 +1,21 @@
+2024-04-18 16:54:08,273 INFO in werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-18 16:54:08,273 INFO in werkzeug: [33mPress CTRL+C to quit[0m
+2024-04-18 16:54:08,275 INFO in werkzeug:  * Restarting with stat
+2024-04-18 16:54:08,433 WARNING in werkzeug:  * Debugger is active!
+2024-04-18 16:54:08,435 INFO in werkzeug:  * Debugger PIN: 988-201-607
+2024-04-18 16:54:11,115 INFO in root: [2024-04-18 16:54:11] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 16:54:11,116 INFO in root: Displayed directory list
+2024-04-18 16:54:11,119 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 16:54:11] "GET / HTTP/1.1" 200 -
+2024-04-18 16:54:14,640 INFO in root: Toggled status of script enabled_script_1 to disabled
+2024-04-18 16:54:14,640 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 16:54:14] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -
+2024-04-18 16:54:16,818 INFO in root: Toggled status of script enabled_script_2 to disabled
+2024-04-18 16:54:16,818 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 16:54:16] "POST /toggle/enabled_script_2 HTTP/1.1" 200 -
+2024-04-18 16:54:17,379 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 16:54:17] "[35m[1mPOST /toggle/disabled_script_1 HTTP/1.1[0m" 500 -
+2024-04-18 16:54:18,041 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 16:54:18] "[35m[1mPOST /toggle/disabled_script_2 HTTP/1.1[0m" 500 -
+2024-04-18 16:55:53,430 INFO in werkzeug:  * Detected change in 'd:\\Code\\Bowser_the_PyRocess_Browser\\Bowser.py', reloading
+2024-04-18 16:55:53,470 INFO in werkzeug:  * Restarting with stat
+2024-04-18 16:59:28,664 INFO in werkzeug:  * Restarting with stat
+2024-04-18 16:59:42,143 INFO in werkzeug:  * Restarting with stat
+2024-04-18 16:59:43,371 INFO in werkzeug:  * Restarting with stat

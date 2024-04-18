@@ -1,0 +1,5 @@
+2024-04-18 16:23:12,241 WARNING in werkzeug:  * Debugger is active!
+2024-04-18 16:23:12,244 INFO in werkzeug:  * Debugger PIN: 988-201-607
+2024-04-18 16:23:36,646 INFO in root: Displayed directory list
+2024-04-18 16:23:36,648 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 16:23:36] "GET / HTTP/1.1" 200 -
+2024-04-18 16:23:57,085 INFO in werkzeug:  * Detected change in 'd:\\Code\\Bowser_the_PyRocess_Browser\\Bowser.py', reloading
