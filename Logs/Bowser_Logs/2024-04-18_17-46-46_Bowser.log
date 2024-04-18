@@ -1,0 +1,90 @@
+2024-04-18 17:46:46,832 INFO in werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-18 17:46:46,832 INFO in werkzeug: [33mPress CTRL+C to quit[0m
+2024-04-18 17:46:46,834 INFO in werkzeug:  * Restarting with stat
+2024-04-18 17:46:46,983 WARNING in werkzeug:  * Debugger is active!
+2024-04-18 17:46:46,986 INFO in werkzeug:  * Debugger PIN: 988-201-607
+2024-04-18 17:46:49,212 INFO in root: [2024-04-18 17:46:49] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:46:49,212 INFO in root: Displayed directory list
+2024-04-18 17:46:49,214 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:46:49] "GET / HTTP/1.1" 200 -
+2024-04-18 17:46:51,768 INFO in root: Moving script folder enabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:46:51,768 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:46:51,768 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:46:51,769 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:46:51] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:46:53,054 INFO in root: Moving script folder enabled_script_2 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_2
+2024-04-18 17:46:53,054 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_2
+2024-04-18 17:46:53,054 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_2
+2024-04-18 17:46:53,055 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:46:53] "POST /toggle/enabled_script_2 HTTP/1.1" 200 -
+2024-04-18 17:46:54,029 INFO in root: Moving script folder enabled_script_2 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_2
+2024-04-18 17:46:54,029 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_2
+2024-04-18 17:46:54,029 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_2
+2024-04-18 17:46:54,030 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:46:54] "POST /toggle/enabled_script_2 HTTP/1.1" 200 -
+2024-04-18 17:46:55,087 INFO in root: Moving script folder disabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_1
+2024-04-18 17:46:55,087 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_1
+2024-04-18 17:46:55,087 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_1
+2024-04-18 17:46:55,087 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:46:55] "POST /toggle/disabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:46:55,753 INFO in root: Moving script folder disabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_1
+2024-04-18 17:46:55,753 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_1
+2024-04-18 17:46:55,753 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_1
+2024-04-18 17:46:55,753 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:46:55] "POST /toggle/disabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:46:56,044 INFO in root: Moving script folder disabled_script_2 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_2
+2024-04-18 17:46:56,044 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_2
+2024-04-18 17:46:56,044 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_2
+2024-04-18 17:46:56,045 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:46:56] "POST /toggle/disabled_script_2 HTTP/1.1" 200 -
+2024-04-18 17:47:02,618 INFO in root: Moving script folder disabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_1
+2024-04-18 17:47:02,619 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_1
+2024-04-18 17:47:02,619 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_1
+2024-04-18 17:47:02,619 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:47:02] "POST /toggle/disabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:47:03,585 INFO in root: Moving script folder enabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:47:03,585 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:47:03,585 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:47:03,586 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:47:03] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:47:05,135 INFO in root: Moving script folder disabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_1
+2024-04-18 17:47:05,135 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_1
+2024-04-18 17:47:05,135 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_1
+2024-04-18 17:47:05,136 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:47:05] "POST /toggle/disabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:47:05,310 INFO in root: Moving script folder disabled_script_2 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_2
+2024-04-18 17:47:05,310 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\disabled_script_2
+2024-04-18 17:47:05,310 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\disabled_script_2
+2024-04-18 17:47:05,311 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:47:05] "POST /toggle/disabled_script_2 HTTP/1.1" 200 -
+2024-04-18 17:48:07,859 INFO in root: [2024-04-18 17:48:07] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:48:07,859 INFO in root: Displayed directory list
+2024-04-18 17:48:07,862 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:48:07] "GET / HTTP/1.1" 200 -
+2024-04-18 17:48:13,271 INFO in root: Moving script folder enabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:48:13,271 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:48:13,271 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:48:13,272 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:48:13] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:48:14,297 INFO in root: Moving script folder enabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:48:14,297 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:48:14,297 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:48:14,297 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:48:14] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:48:57,795 INFO in root: [2024-04-18 17:48:57] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:48:57,796 INFO in root: Displayed directory list
+2024-04-18 17:48:57,796 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:48:57] "GET / HTTP/1.1" 200 -
+2024-04-18 17:49:58,446 INFO in root: [2024-04-18 17:49:58] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:49:58,446 INFO in root: Displayed directory list
+2024-04-18 17:49:58,447 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:49:58] "GET / HTTP/1.1" 200 -
+2024-04-18 17:50:00,722 INFO in root: Moving script folder enabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:50:00,722 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:50:00,722 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:50:00,723 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:50:00] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:50:01,552 INFO in root: [2024-04-18 17:50:01] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:50:01,552 INFO in root: Displayed directory list
+2024-04-18 17:50:01,553 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:50:01] "GET / HTTP/1.1" 200 -
+2024-04-18 17:50:03,335 INFO in root: Moving script folder enabled_script_1 from d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled to d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:50:03,336 INFO in root: Source path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Disabled\enabled_script_1
+2024-04-18 17:50:03,336 INFO in root: Destination path: d:\Code\Bowser_the_PyRocess_Browser\PyRocesses\Enabled\enabled_script_1
+2024-04-18 17:50:03,336 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:50:03] "POST /toggle/enabled_script_1 HTTP/1.1" 200 -
+2024-04-18 17:50:04,046 INFO in root: [2024-04-18 17:50:04] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:50:04,046 INFO in root: Displayed directory list
+2024-04-18 17:50:04,046 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:50:04] "GET / HTTP/1.1" 200 -
+2024-04-18 17:50:18,908 INFO in root: [2024-04-18 17:50:18] 127.0.0.1 - GET http://127.0.0.1:5000/ - 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+2024-04-18 17:50:18,908 INFO in root: Displayed directory list
+2024-04-18 17:50:18,908 INFO in werkzeug: 127.0.0.1 - - [18/Apr/2024 17:50:18] "GET / HTTP/1.1" 200 -

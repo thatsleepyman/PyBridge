@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bowser</title>
+    <title>Bowser the PyRocess Browser</title>
     <style>
         .enabled { color: green; }
         .disabled { color: red; }
@@ -14,8 +14,8 @@
     <ul>
         {% for dir, status in directories.items() %}
             <li>
-                {{ dir }} - <span class="{{ status }}">{{ status }}</span>
-                <button class="toggle-button" data-script="{{ dir }}" data-status="{{ status }}">Toggle</button>
+                {{ dir }} - <span class="{{ status }}"></span>
+                <button class="toggle-button" data-script="{{ dir }}" data-status="{{ status }}">{{ status }}</button>
             </li>
         {% endfor %}
     </ul>
@@ -23,7 +23,7 @@
         document.querySelectorAll('.toggle-button').forEach(button => {
             button.addEventListener('click', function() {
                 const scriptName = this.getAttribute('data-script');
-                const statusElement = this.previousSibling; // Reference to the <span> element
+                const buttonElement = this; // Reference to the <button> element
     
                 fetch(`/toggle/${scriptName}`, {
                     method: 'POST',
@@ -34,10 +34,17 @@
                 })
                 .then(response => response.text())
                 .then(newStatus => {
-                    statusElement.textContent = newStatus;
+                    buttonElement.textContent = newStatus;
+                    buttonElement.classList.remove('enabled', 'disabled');
+                    buttonElement.classList.add(newStatus);
                 })
                 .catch(error => console.error('Error toggling script status:', error));
             });
+
+            // Set initial text for the button
+            const initialStatus = button.getAttribute('data-status');
+            button.textContent = initialStatus.toLowerCase(); // Convert to lowercase
+            button.classList.add(initialStatus.toLowerCase()); // Add appropriate color class
         });
     </script>    
 </body>
