@@ -1,48 +1,57 @@
+import subprocess
 import os
-import datetime
 import logging
-from flask import Flask, render_template, request, jsonify
-from PyRocesses import get_script_directories, toggle_script
+from logging.handlers import RotatingFileHandler
+from datetime import datetime
+from flask import Flask, request, abort
 
-# Set the root path to the directory containing the Python script
-root_path = os.path.dirname(os.path.abspath(__file__))
-app = Flask(__name__, root_path=root_path)
+app = Flask(__name__)
 
-# Configure logging
-log_folder = os.path.join(root_path, 'Logs\\Bowser_Logs')
-os.makedirs(log_folder, exist_ok=True)
-log_file_name = os.path.join(log_folder, f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_{app.name}.log")
-logging.basicConfig(filename=log_file_name, level=logging.INFO, format='%(asctime)s %(levelname)s in %(name)s: %(message)s')
+# Define master password
+MASTER_PASSWORD = "M@sterPassw0rd!"
 
-# Route to display the list of scripts
-@app.route('/')
-def index():
-    # Log the request
-    log_request(request)
+def setup_logging():
+    log_dir = "./Log/Bowser_Logging"
+    os.makedirs(log_dir, exist_ok=True)
+
+    log_file = f"{log_dir}/{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_Bowser.log"
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    file_handler = RotatingFileHandler(log_file, maxBytes=5*1024*1024, backupCount=3)
+    file_handler.setFormatter(formatter)
+
+    app.logger.addHandler(file_handler)
+    app.logger.setLevel(logging.INFO)
+
+setup_logging()
+
+@app.route('/Bowser', methods=['POST'])
+def bowser():
+    # Check if master and process password is provided
+    json_master_password = request.json.get('master_password')
+    json_process_password = request.json.get('process_password')
+    # Get process_name to decide what script to send the message to
+    json_process_name = request.json.get('process_name')
+
+    if json_master_password != MASTER_PASSWORD:
+        app.logger.error("Unauthorized access attempt")
+        abort(401)  # Unauthorized
+
+    # Receive message from request
+    message = request.json.get('message')
+    app.logger.info(f"Received message: {message} for process: {json_process_name}")
+
+    # Forward message to PyRocess_Handler.py for processing
+    process_message(json_process_password, json_process_name, message)
     
-    directories = {}
-    enabled_dirs, disabled_dirs = get_script_directories()
-    directories.update(enabled_dirs)
-    directories.update(disabled_dirs)
-    logging.info('Displayed directory list')
-    return render_template('index.html', directories=directories)
+    return f"Message received and forwarded to PyRocess_Handler to trigger {json_process_name}", 200
 
-# Route to toggle the status of a script
-@app.route('/toggle/<script_name>', methods=['POST'])
-def toggle(script_name):
-    new_status = toggle_script(script_name)
-    return new_status
-
-# Function to log the request
-def log_request(req):
-    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    ip_address = req.remote_addr
-    http_method = req.method
-    url = req.url
-    status_code = 200  # Assuming success by default
-    user_agent = req.user_agent.string
-    log_entry = f"[{timestamp}] {ip_address} - {http_method} {url} - {status_code} - {user_agent}\n"
-    logging.info(log_entry)
+def process_message(json_process_password, json_process_name, message):
+    try:
+        # Execute PyRocess_Handler.py and pass the message as an argument
+        subprocess.run(['python', 'PyRocess_Handler.py', json_process_password, json_process_name, message], check=True)
+        app.logger.info(f"Message forwarded to PyRocess_Handler for process: {json_process_name}")
+    except subprocess.CalledProcessError as e:
+        app.logger.error(f"Failed to trigger {json_process_name}: {e}")
 
 
 if __name__ == '__main__':
