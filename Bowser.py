@@ -7,22 +7,35 @@ from flask import Flask, request, abort
 
 app = Flask(__name__)
 
-# Define master password
-MASTER_PASSWORD = "M@sterPassw0rd!"
+# Define master password and process password
+MASTER_PASSWORD = os.getenv("MASTER_PASSWORD")
+PROCESS_PASSWORD = os.getenv("PROCESS_PASSWORD")
 
-def setup_logging():
-    log_dir = "./Log/Bowser_Logging"
-    os.makedirs(log_dir, exist_ok=True)
+def create_log_dir(log_dir):
+    try:
+        os.makedirs(log_dir, exist_ok=True)
+    except Exception as e:
+        app.logger.error(f"Failed to create log directory {log_dir}. Error: {e}")
+        raise
+
+def setup_logging(log_dir):
+    create_log_dir(log_dir)
 
     log_file = f"{log_dir}/{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_Bowser.log"
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     file_handler = RotatingFileHandler(log_file, maxBytes=5*1024*1024, backupCount=3)
     file_handler.setFormatter(formatter)
 
-    app.logger.addHandler(file_handler)
-    app.logger.setLevel(logging.INFO)
+    try:
+        app.logger.addHandler(file_handler)
+        app.logger.setLevel(logging.INFO)
+    except Exception as e:
+        app.logger.error(f"Failed to setup logger. Error: {e}")
+        raise
 
-setup_logging()
+# Usage
+log_dir = "./Log/Bowser_Logging"
+setup_logging(log_dir)
 
 @app.route('/Bowser', methods=['POST'])
 def bowser():
@@ -32,7 +45,12 @@ def bowser():
     # Get process_name to decide what script to send the message to
     json_process_name = request.json.get('process_name')
 
-    if json_master_password != MASTER_PASSWORD:
+    # Validate inputs
+    if not all([json_master_password, json_process_password, json_process_name]):
+        app.logger.error("Invalid input")
+        abort(400)  # Bad Request
+
+    if json_master_password != MASTER_PASSWORD or json_process_password != PROCESS_PASSWORD:
         app.logger.error("Unauthorized access attempt")
         abort(401)  # Unauthorized
 

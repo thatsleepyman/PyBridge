@@ -4,10 +4,10 @@ import logging
 import os
 from subprocess import CalledProcessError
 from datetime import datetime
-from html import escape  # Import escape function for HTML sanitization
+from html import escape
 
 def setup_logging():
-    log_dir = "./Log/PyRocess_Handler_Logging"  # Use forward slashes for cross-platform compatibility
+    log_dir = "./Log/PyRocess_Handler_Logging" # Use forward slashes for cross-platform compatibility
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
 
@@ -18,12 +18,12 @@ def main(message):
     setup_logging()
 
     # Check process password if necessary
-    process_password = "passw0rd2!"  # Set your process password here
+    process_password = os.getenv("PROCESS_PASSWORD")
     process_name = sys.argv[2]
 
     # Validate process password
     json_process_password = sys.argv[1]
-    if not json_process_password or not json_process_password.isalnum():
+    if not json_process_password:
         logging.error("Unauthorized: Incorrect or missing process password")
         return
 
@@ -32,7 +32,7 @@ def main(message):
         return
 
     # Validate process name
-    if not process_name or not process_name.isalnum():
+    if not process_name:
         logging.error("Invalid process name")
         return
 
@@ -52,7 +52,7 @@ def main(message):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 4:
+    if len(sys.argv) < 3:
         print("Usage: PyRocess_Handler.py [process_password] [process_name] [message]")
     else:
         main(sys.argv[3])  # Message is the third argument
