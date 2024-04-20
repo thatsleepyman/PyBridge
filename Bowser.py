@@ -43,6 +43,7 @@ def setup_logging(log_dir):
 log_dir = "./Log/Bowser_Logging"
 setup_logging(log_dir)
 
+# Forward API call to PyRocess_Handler.py
 @app.route('/Bowser', methods=['POST'])
 def bowser():
     # Check if master and process password is provided
@@ -56,7 +57,7 @@ def bowser():
         app.logger.error("Invalid input")
         abort(400)  # Bad Request
 
-    if json_master_password != MASTER_PASSWORD or json_process_password != PROCESS_PASSWORD:
+    if json_master_password != MASTER_PASSWORD and json_process_password != PROCESS_PASSWORD:
         app.logger.error("Unauthorized access attempt")
         abort(401)  # Unauthorized
 
