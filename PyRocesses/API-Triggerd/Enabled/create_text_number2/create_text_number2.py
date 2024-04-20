@@ -4,7 +4,7 @@ import os
 def process_message(message):
     try:
         # Save the message to a text file
-        with open("message2.txt", "w") as file:
+        with open("./message2.txt", "w") as file:
             file.write(message)
         print("Message saved to message.txt")
         return "File created successfully"
