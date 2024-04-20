@@ -5,17 +5,13 @@ import os
 from subprocess import CalledProcessError
 from datetime import datetime
 from html import escape
-
-def setup_logging():
-    log_dir = "./Log/PyRocess_Handler_Logging" # Use forward slashes for cross-platform compatibility
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
-
-    log_file = f"{log_dir}/{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_PyRocess_Handler.log"
-    logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+from Logger import setup_logging
 
 def main(message):
-    setup_logging()
+    # Setup logging
+    log_dir = "./Log/PyRocess_Handler_Logging"
+    log_file_prefix = "PyRocess_Handler"
+    setup_logging(log_dir, log_file_prefix)
 
     # Check process password if necessary
     process_password = os.getenv("PROCESS_PASSWORD")

@@ -4,12 +4,18 @@ import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
 from flask import Flask, request, abort
+from Logger import setup_logging
 
 app = Flask(__name__)
 
 # Define master password and process password
 MASTER_PASSWORD = os.getenv("MASTER_PASSWORD")
 PROCESS_PASSWORD = os.getenv("PROCESS_PASSWORD")
+
+# Setup logging
+log_dir = "./Log/Bowser_Logging"
+log_file_prefix = "Bowser"
+setup_logging(log_dir, log_file_prefix)
 
 def create_log_dir(log_dir):
     try:
