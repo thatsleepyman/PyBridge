@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="adf45e00-4906-41bf-a879-ebdc4a3a5202" name="Changes" comment="Imported into PyCharm, slight edits">
+      <change afterPath="$PROJECT_DIR$/Log/Bowser_Logging/2024-04-21_21-17-42_Bowser.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Log/Bowser_Logging/2024-04-21_21-18-16_Bowser.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Log/Bowser_Logging/2024-04-21_21-18-43_Bowser.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Log/Bowser_Logging/2024-04-21_21-19-12_Bowser.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Log/Bowser_Logging/2024-04-21_21-19-58_Bowser.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d284eeb8-cbc1-4731-862a-62d9376b9c49" />
+        <option name="url" value="https://github.com/thatsleepyman/Bowser_the_PyRocess_Browser.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2fQGbCzoLQvK7GO8xOLkgbtyEAc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.Bowser.executor": "Run",
+    "Python.Request.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "dev",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "D:/Code/Bowser_the_PyRocess_Browser",
+    "settings.editor.selected.configurable": "Errors"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="adf45e00-4906-41bf-a879-ebdc4a3a5202" name="Changes" comment="" />
+      <created>1713725962506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713725962506</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Imported into PyCharm">
+      <option name="closed" value="true" />
+      <created>1713726401530</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713726401530</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Imported into PyCharm, slight edits">
+      <option name="closed" value="true" />
+      <created>1713727297956</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713727297956</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Imported into PyCharm" />
+    <MESSAGE value="Imported into PyCharm, slight edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Imported into PyCharm, slight edits" />
+  </component>
+</project>
