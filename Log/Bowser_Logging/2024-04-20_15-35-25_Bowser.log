@@ -1,8 +1,0 @@
-2024-04-20 15:35:25,758 - WARNING -  * Debugger is active!
-2024-04-20 15:35:25,759 - INFO -  * Debugger PIN: 988-201-607
-2024-04-20 15:35:28,366 - INFO - Received message: Hello world 3002! for process: create_text_number1
-2024-04-20 15:35:28,366 - INFO - Received message: Hello world 3002! for process: create_text_number1
-2024-04-20 15:35:28,422 - INFO - Message forwarded to PyRocess_Handler for process: create_text_number1
-2024-04-20 15:35:28,422 - INFO - Message forwarded to PyRocess_Handler for process: create_text_number1
-2024-04-20 15:35:28,423 - INFO - 127.0.0.1 - - [20/Apr/2024 15:35:28] "POST /Bowser HTTP/1.1" 200 -
-2024-04-20 15:35:39,035 - INFO -  * Detected change in 'c:\\Users\\Stefa\\Downloads\\Bowser_the_PyRocess_Browser\\Request.py', reloading
