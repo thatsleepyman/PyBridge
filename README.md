@@ -22,5 +22,19 @@ Ensure you have the following installed on your machine:
 ### Installation
 
 1. Clone the repository
-```bash
+```cmd
 git clone https://github.com/yourusername/Bowser_the_Pyrocess_Browser.git
+```
+
+2. Navigate to the project directory
+```cmd
+cd Bowser_the_Pyrocess_Browser
+```
+
+3. Install the required dependencies
+```cmd
+pip install -r requirements.txt
+```
+
+License
+This project is licensed under the MIT License - Feel free to use it as you wish, however some credit for the template would be nice ;)
