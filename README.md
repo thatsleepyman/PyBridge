@@ -37,4 +37,4 @@ pip install -r requirements.txt
 ```
 
 ### License
-This project is licensed under the MIT License - Feel free to use it as you wish, however some credit for the template would be nice ;)
+This project is licensed under the MIT License - Feel free to use it as you wish, however some credit for this project would be nice if you end up using it ;)
