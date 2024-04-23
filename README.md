@@ -36,5 +36,5 @@ cd Bowser_the_Pyrocess_Browser
 pip install -r requirements.txt
 ```
 
-License
+### License
 This project is licensed under the MIT License - Feel free to use it as you wish, however some credit for the template would be nice ;)
