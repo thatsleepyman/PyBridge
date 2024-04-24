@@ -13,19 +13,8 @@ def main(message):
     log_file_prefix = "PyRocess_Handler"
     setup_logging(log_dir, log_file_prefix)
 
-    # Check process password if necessary
-    process_password = os.getenv("PROCESS_PASSWORD")
-    process_name = sys.argv[2]
-
-    # Validate process password
-    json_process_password = sys.argv[1]
-    if not json_process_password:
-        logging.error("Unauthorized: Incorrect or missing process password")
-        return
-
-    if json_process_password != process_password:
-        logging.error("Unauthorized: Incorrect process password")
-        return
+    # Get process_name
+    process_name = sys.argv[1]
 
     # Validate process name
     if not process_name:
@@ -48,7 +37,7 @@ def main(message):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 3:
-        print("Usage: PyRocess_Handler.py [process_password] [process_name] [message]")
+    if len(sys.argv) < 2:
+        print("Usage: PyRocess_Handler.py [process_name] [message]")
     else:
-        main(sys.argv[3])  # Message is the third argument
+        main(sys.argv[2])  # Message is the second argument

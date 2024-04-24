@@ -4,27 +4,41 @@ import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
 from flask import Flask, request, abort
+import html
 from Logger import setup_logging
 
+
+# Initialize Flask app
 app = Flask(__name__)
 
 # Define master password and process password
+# These are environment variables and should be set in the environment where this script runs
 MASTER_PASSWORD = os.getenv("MASTER_PASSWORD")
 PROCESS_PASSWORD = os.getenv("PROCESS_PASSWORD")
 
-# Setup logging
+# Define log directory and file prefix
 log_dir = "./Log/Bowser_Logging"
 log_file_prefix = "Bowser"
+
+# Setup logging
 setup_logging(log_dir, log_file_prefix)
 
+
 def create_log_dir(log_dir):
+    """
+    Create a directory for logs.
+    """
     try:
         os.makedirs(log_dir, exist_ok=True)
     except Exception as e:
         app.logger.error(f"Failed to create log directory {log_dir}. Error: {e}")
         raise
 
+
 def setup_logging(log_dir):
+    """
+    Setup logging for the application.
+    """
     create_log_dir(log_dir)
 
     log_file = f"{log_dir}/{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_Bowser.log"
@@ -39,17 +53,19 @@ def setup_logging(log_dir):
         app.logger.error(f"Failed to setup logger. Error: {e}")
         raise
 
-# Usage
+# Setup logging for the application
 log_dir = "./Log/Bowser_Logging"
 setup_logging(log_dir)
 
-# Forward API call to PyRocess_Handler.py
+
 @app.route('/Bowser', methods=['POST'])
 def bowser():
-    # Check if master and process password is provided
+    """
+    Endpoint to receive messages and execute corresponding scripts.
+    """
+    # Extract data from request
     json_master_password = request.json.get('master_password')
     json_process_password = request.json.get('process_password')
-    # Get process_name to decide what script to send the message to
     json_process_name = request.json.get('process_name')
 
     # Validate inputs
@@ -57,27 +73,26 @@ def bowser():
         app.logger.error("Invalid input")
         abort(400)  # Bad Request
 
-    if json_master_password != MASTER_PASSWORD and json_process_password != PROCESS_PASSWORD:
+    # Check for unauthorized access
+    if json_master_password != MASTER_PASSWORD or json_process_password != PROCESS_PASSWORD:
         app.logger.error("Unauthorized access attempt")
         abort(401)  # Unauthorized
 
-    # Receive message from request
-    message = request.json.get('message')
+    # Receive message from request and sanitize it
+    message = html.escape(request.json.get('message'))
     app.logger.info(f"Received message: {message} for process: {json_process_name}")
 
-    # Forward message to PyRocess_Handler.py for processing
-    process_message(json_process_password, json_process_name, message)
-    
-    return f"Message received and forwarded to PyRocess_Handler to trigger {json_process_name}", 200
-
-def process_message(json_process_password, json_process_name, message):
+    # Execute the appropriate script based on process name
     try:
-        # Execute PyRocess_Handler.py and pass the message as an argument
-        subprocess.run(['python', 'PyRocess_Handler.py', json_process_password, json_process_name, message], check=True)
-        app.logger.info(f"Message forwarded to PyRocess_Handler for process: {json_process_name}")
+        subprocess.run(['python', f'./PyRocesses/API-Triggerd/Enabled/{json_process_name}/{json_process_name}.py', message], check=True)
+        app.logger.info(f"Process completed successfully: {json_process_name}.py")
     except subprocess.CalledProcessError as e:
-        app.logger.error(f"Failed to trigger {json_process_name}: {e}")
+        app.logger.error(f"Failed to execute {json_process_name}.py: {e}")
+        return f"Failed to execute {json_process_name}.py: {e}", 500
+
+    return f"Message received and processed by {json_process_name}", 200
 
 
+# Run the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
