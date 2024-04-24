@@ -11,3 +11,4 @@
 2024-04-24 20:52:01,056 - INFO - 127.0.0.1 - - [24/Apr/2024 20:52:01] "POST /Bowser HTTP/1.1" 200 -
 2024-04-24 20:56:42,280 - INFO -  * Detected change in 'D:\\Code\\Bowser_the_PyRocess_Browser\\Request.py', reloading
 2024-04-24 20:56:42,315 - INFO -  * Restarting with stat
+2024-04-24 21:00:24,349 - INFO -  * Restarting with stat
