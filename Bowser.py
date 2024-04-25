@@ -85,7 +85,7 @@ def bowser():
 
     # Execute the appropriate script based on process name
     try:
-        subprocess.run(['python', f'./PyRocesses/API-Triggerd/Enabled/{json_process_name}/{json_process_name}.py', message], check=True)
+        subprocess.run(['python', f'./PyRocesses/API-Triggered/Enabled/{json_process_name}/{json_process_name}.py', message], check=True)
         app.logger.info(f"Process completed successfully: {json_process_name}.py")
     except subprocess.CalledProcessError as e:
         app.logger.error(f"Failed to execute {json_process_name}.py: {e}")
