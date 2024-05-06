@@ -8,7 +8,6 @@ from flask import Flask, request, abort
 import html
 
 
-
 # Initialize Flask app
 app = Flask(__name__)
 

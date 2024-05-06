@@ -1,5 +1,6 @@
-Flask==2.2.5
-requests==2.31.0
-python-dotenv==0.19.1
-fernet==1.0.0
-cryptography==42.0.4
+flask
+requests
+python-dotenv
+fernet
+cryptography
+logging
