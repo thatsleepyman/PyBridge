@@ -21,7 +21,7 @@ PROCESS_TOKEN = os.getenv("PROCESS_TOKEN")
 DEVELOPER_TOKEN = os.getenv("DEVELOPER_TOKEN")
 
 # Define log directory and file prefix
-log_dir = "../Log/Bowser_Logging"
+log_dir = "../logs/Bowser_Logging"
 log_file_prefix = "Bowser"
 
 # Setup logging
