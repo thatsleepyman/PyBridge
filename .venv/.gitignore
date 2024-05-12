@@ -1,6 +1,0 @@
-# files
-*.log
-
-# directories
-.venv
-__pycache__
