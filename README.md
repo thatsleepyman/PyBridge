@@ -18,7 +18,8 @@ Bowser_the_Pyrocess_Browser is a Python-based Event-Driven Script Browser (ESB) 
 Ensure you have the following installed on your machine:
 
 - Python 3.x
-- Flask
+- Install the required dependencies listed below
+
 
 ### Installation
 
