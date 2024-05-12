@@ -1,20 +1,24 @@
+# Import required modules
 import subprocess
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-from Logger import setup_logging
 from datetime import datetime
 from flask import Flask, request, abort
 import html
+
+# Import functions
+from Logger import setup_logging
 
 
 # Initialize Flask app
 app = Flask(__name__)
 
-# Define master password and process password
+# Define master, process and developer Tokens
 # These are environment variables and should be set in the environment where this script runs
-MASTER_PASSWORD = os.getenv("MASTER_PASSWORD")
-PROCESS_PASSWORD = os.getenv("PROCESS_PASSWORD")
+MASTER_TOKEN = os.getenv("MASTER_TOKEN")
+PROCESS_TOKEN = os.getenv("PROCESS_TOKEN")
+DEVELOPER_TOKEN = os.getenv("DEVELOPER_TOKEN")
 
 # Define log directory and file prefix
 log_dir = "./Log/Bowser_Logging"
@@ -58,23 +62,24 @@ log_dir = "./Log/Bowser_Logging"
 setup_logging(log_dir)
 
 
+# Main routing
 @app.route('/Bowser', methods=['POST'])
 def bowser():
     """
     Endpoint to receive messages and execute corresponding scripts.
     """
     # Extract data from request
-    json_master_password = request.json.get('master_password')
-    json_process_password = request.json.get('process_password')
+    json_MASTER_TOKEN = request.json.get('MASTER_TOKEN')
+    json_PROCESS_TOKEN = request.json.get('PROCESS_TOKEN')
     json_process_name = request.json.get('process_name')
 
     # Validate inputs
-    if not all([json_master_password, json_process_password, json_process_name]):
+    if not all([json_MASTER_TOKEN, json_PROCESS_TOKEN, json_process_name]):
         app.logger.error("Invalid input")
         abort(400)  # Bad Request
 
     # Check for unauthorized access
-    if json_master_password != MASTER_PASSWORD or json_process_password != PROCESS_PASSWORD:
+    if json_MASTER_TOKEN != MASTER_TOKEN or json_PROCESS_TOKEN != PROCESS_TOKEN:
         app.logger.error("Unauthorized access attempt")
         abort(401)  # Unauthorized
 
@@ -85,6 +90,43 @@ def bowser():
     # Execute the appropriate script based on process name
     try:
         subprocess.run(['python', f'./PyRocesses/API-Triggered/Enabled/{json_process_name}/{json_process_name}.py', message], check=True)
+        app.logger.info(f"Process completed successfully: {json_process_name}.py")
+    except subprocess.CalledProcessError as e:
+        app.logger.error(f"Failed to execute {json_process_name}.py: {e}")
+        return f"Failed to execute {json_process_name}.py: {e}", 500
+
+    return f"Message received and processed by {json_process_name}", 200
+
+
+# Developer routing
+@app.route('/Bowser_DEV', methods=['POST'])
+def bowser_dev():
+    """
+    Endpoint to receive messages and execute corresponding scripts.
+    """
+    # Extract data from request
+    json_MASTER_TOKEN = request.json.get('MASTER_TOKEN')
+    json_DEVELOPER_TOKEN = request.json.get('DEVELOPER_TOKEN')
+    json_PROCESS_TOKEN = request.json.get('PROCESS_TOKEN')
+    json_process_name = request.json.get('process_name')
+
+    # Validate inputs
+    if not all([json_MASTER_TOKEN, json_DEVELOPER_TOKEN, json_PROCESS_TOKEN, json_process_name]):
+        app.logger.error("Invalid input, check tokens or process name")
+        abort(400)  # Bad Request
+
+    # Check for unauthorized access
+    if not all([json_MASTER_TOKEN, json_DEVELOPER_TOKEN, json_PROCESS_TOKEN]):
+        app.logger.error("Unauthorized access attempt")
+        abort(401)  # Unauthorized
+
+    # Receive message from request and sanitize it
+    message = html.escape(request.json.get('message'))
+    app.logger.info(f"Received message: {message} for process: {json_process_name}")
+
+    # Execute the appropriate script based on process name
+    try:
+        subprocess.run(['python', f'./PyRocesses/API-Triggered/Developer_Tools/{json_process_name}/{json_process_name}.py', message], check=True)
         app.logger.info(f"Process completed successfully: {json_process_name}.py")
     except subprocess.CalledProcessError as e:
         app.logger.error(f"Failed to execute {json_process_name}.py: {e}")

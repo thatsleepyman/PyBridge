@@ -1,9 +1,10 @@
 import requests
 
-def Bowser_to_flask_app(master_password, process_password, process_name, message):
-    url = 'http://127.0.0.1:5000/Bowser'
-    data = {'master_password': master_password,
-            'process_password': process_password,
+def Bowser_to_flask_app(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, message):
+    url = 'http://127.0.0.1:5000/Bowser_DEV'
+    data = {'MASTER_TOKEN': MASTER_TOKEN,
+            'DEVELOPER_TOKEN': DEVELOPER_TOKEN,
+            'PROCESS_TOKEN': PROCESS_TOKEN,
             'process_name': process_name,
             'message': message}
     response = requests.post(url, json=data)
@@ -16,9 +17,10 @@ def Bowser_to_flask_app(master_password, process_password, process_name, message
 
 if __name__ == '__main__':
     
-    master_password = "master_password_3002"
-    process_password = "process_password_3002"
-    process_name = "create_text_number1"
-    message = "Hello world 3123!"
+    MASTER_TOKEN = "MASTER_TOKEN_3002"
+    DEVELOPER_TOKEN = "DEVELOPER_TOKEN_3002"
+    PROCESS_TOKEN = "PROCESS_TOKEN_3002"
+    process_name = "create_text_number3"
+    message = "Hello world 3!"
     
-    Bowser_to_flask_app(master_password, process_password, process_name, message)
+    Bowser_to_flask_app(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, message)
