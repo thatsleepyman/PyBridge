@@ -14,14 +14,15 @@ from Logger import setup_logging
 # Initialize Flask app
 app = Flask(__name__)
 
-# Define master, process and developer Tokens
-# These are environment variables and should be set in the environment where this script runs
+
+# Get master, process and developer Tokens
 MASTER_TOKEN = os.getenv("MASTER_TOKEN")
 PROCESS_TOKEN = os.getenv("PROCESS_TOKEN")
 DEVELOPER_TOKEN = os.getenv("DEVELOPER_TOKEN")
 
+
 # Define log directory and file prefix
-log_dir = "../logs/Bowser_Logging"
+log_dir = "./logs/Bowser_Logging"
 log_file_prefix = "Bowser"
 
 # Setup logging
@@ -56,10 +57,6 @@ def setup_logging(log_dir):
     except Exception as e:
         app.logger.error(f"Failed to setup logger. Error: {e}")
         raise
-
-# Setup logging for the application
-log_dir = "./Log/Bowser_Logging"
-setup_logging(log_dir)
 
 
 # Main routing
