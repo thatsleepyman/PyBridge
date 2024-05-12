@@ -1,8 +1,0 @@
-2024-05-13 00:52:22,076 - WARNING -  * Debugger is active!
-2024-05-13 00:52:22,077 - INFO -  * Debugger PIN: 164-903-508
-2024-05-13 00:52:40,596 - INFO - Received message: Hello world 3! for process: create_text_number3
-2024-05-13 00:52:40,596 - INFO - Received message: Hello world 3! for process: create_text_number3
-2024-05-13 00:52:40,614 - INFO - Process completed successfully: create_text_number3.py
-2024-05-13 00:52:40,614 - INFO - Process completed successfully: create_text_number3.py
-2024-05-13 00:52:40,615 - INFO - 127.0.0.1 - - [13/May/2024 00:52:40] "POST /Bowser_DEV HTTP/1.1" 200 -
-2024-05-13 00:52:58,358 - INFO -  * Detected change in 'd:\\Code\\Bowser_the_PyRocess_Browser\\Request.py', reloading
