@@ -17,9 +17,9 @@ def Bowser_to_flask_app(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_na
 
 if __name__ == '__main__':
     
-    MASTER_TOKEN = "MASTER_TOKEN_3002"
-    DEVELOPER_TOKEN = "DEVELOPER_TOKEN_3002"
-    PROCESS_TOKEN = "PROCESS_TOKEN_3002"
+    MASTER_TOKEN = "testm"
+    DEVELOPER_TOKEN = "testd"
+    PROCESS_TOKEN = "testp"
     process_name = "create_text_number3"
     message = "Hello world 3!"
     

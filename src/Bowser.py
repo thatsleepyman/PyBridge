@@ -6,6 +6,7 @@ from logging.handlers import RotatingFileHandler
 from datetime import datetime
 from flask import Flask, request, abort
 import html
+from dotenv import load_dotenv
 
 # Import functions
 from Logger import setup_logging
@@ -14,6 +15,8 @@ from Logger import setup_logging
 # Initialize Flask app
 app = Flask(__name__)
 
+
+load_dotenv('.env')
 
 # Get master, process and developer Tokens
 MASTER_TOKEN = os.getenv("MASTER_TOKEN")
@@ -86,7 +89,7 @@ def bowser():
 
     # Execute the appropriate script based on process name
     try:
-        subprocess.run(['python', f'./PyRocesses/API-Triggered/Enabled/{json_process_name}/{json_process_name}.py', message], check=True)
+        subprocess.run(['python', f'./src/PyRocesses/API-Triggered/Enabled/{json_process_name}/{json_process_name}.py', message], check=True)
         app.logger.info(f"Process completed successfully: {json_process_name}.py")
     except subprocess.CalledProcessError as e:
         app.logger.error(f"Failed to execute {json_process_name}.py: {e}")
@@ -113,7 +116,7 @@ def bowser_dev():
         abort(400)  # Bad Request
 
     # Check for unauthorized access
-    if not all([json_MASTER_TOKEN, json_DEVELOPER_TOKEN, json_PROCESS_TOKEN]):
+    if json_MASTER_TOKEN != MASTER_TOKEN or json_DEVELOPER_TOKEN != DEVELOPER_TOKEN or json_PROCESS_TOKEN != PROCESS_TOKEN:
         app.logger.error("Unauthorized access attempt")
         abort(401)  # Unauthorized
 
@@ -123,7 +126,7 @@ def bowser_dev():
 
     # Execute the appropriate script based on process name
     try:
-        subprocess.run(['python', f'./PyRocesses/API-Triggered/Developer_Tools/{json_process_name}/{json_process_name}.py', message], check=True)
+        subprocess.run(['python', f'./src/PyRocesses/API-Triggered/Developer_Tools/{json_process_name}/{json_process_name}.py', message], check=True)
         app.logger.info(f"Process completed successfully: {json_process_name}.py")
     except subprocess.CalledProcessError as e:
         app.logger.error(f"Failed to execute {json_process_name}.py: {e}")
