@@ -9,6 +9,7 @@ Bowser_the_Pyrocess_Browser is a Python-based Event-Driven Script Browser (ESB) 
 - **Timer Intervals:** Execute scripts at regular intervals.
 - **Schedules:** Run scripts according to a predefined schedule.
 - **API Triggers:** Trigger script execution through API calls.
+- **Tokens:** Control execution rights.
 
 ## Getting Started
 
@@ -35,6 +36,10 @@ cd Bowser_the_Pyrocess_Browser
 ```cmd
 pip install -r requirements.txt
 ```
+#### Understanding Tokens
+- MASTER_TOKEN: Acts like a license key, granting the requestor the right to send requests to Bowser.
+- PROCESS_TOKEN: Allows the requestor to send data to and trigger processes.
+- DEV_TOKEN: Used to change settings within Bowser, such as enabling or disabling processes.
 
 ### License
 This project is licensed under the MIT License - Feel free to use it as you wish, however some credit for this project would be nice if you end up using it ;)
