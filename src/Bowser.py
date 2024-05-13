@@ -1,22 +1,22 @@
-# Import required modules
-import subprocess
+# Standard library imports
 import os
+import subprocess
 import logging
-from logging.handlers import RotatingFileHandler
 from datetime import datetime
+from logging.handlers import RotatingFileHandler
+
+# Third-party imports
 from flask import Flask, request, abort
 import html
 from dotenv import load_dotenv
 
-# Import functions
+# Local application/library specific imports
 from Logger import setup_logging
 
 
 # Initialize Flask app
 app = Flask(__name__)
 
-
-load_dotenv('.env')
 
 # Get master, process and developer Tokens
 MASTER_TOKEN = os.getenv("MASTER_TOKEN")
