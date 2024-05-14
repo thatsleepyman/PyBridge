@@ -37,10 +37,10 @@ cd Bowser_the_Pyrocess_Browser
 ```cmd
 pip install -r requirements.txt
 ```
-#### Understanding Tokens
-- MASTER_TOKEN: Acts like a license key, granting the requestor the right to send requests to Bowser.
-- PROCESS_TOKEN: Allows the requestor to send data to and trigger processes.
-- DEVELOPER_TOKEN: Used to change settings within Bowser, such as enabling or disabling processes.
+## Understanding Tokens
+- **MASTER_TOKEN:** Acts like a license key, granting the requestor the right to send requests to Bowser.
+- **PROCESS_TOKEN:** Allows the requestor to send data to and trigger processes.
+- **DEVELOPER_TOKEN:** Used to change settings within Bowser, such as enabling or disabling processes.
 
-### License
+## License
 This project is licensed under the MIT License - Feel free to use it as you wish, however some credit for this project would be nice if you end up using it ;)
