@@ -99,7 +99,7 @@ def bowser():
 
 
 # Developer routing
-@app.route('/Bowser_DEV', methods=['POST'])
+@app.route('/Bowser_dev', methods=['POST'])
 def bowser_dev():
     """
     Endpoint to receive messages and execute corresponding scripts.

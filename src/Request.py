@@ -3,7 +3,7 @@ import requests
 
 
 def Bowser_to_flask_app(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, message):
-    url = 'http://127.0.0.1:5000/Bowser_DEV'
+    url = 'http://127.0.0.1:5000/Bowser_dev'
     data = {'MASTER_TOKEN': MASTER_TOKEN,
             'DEVELOPER_TOKEN': DEVELOPER_TOKEN,
             'PROCESS_TOKEN': PROCESS_TOKEN,
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     MASTER_TOKEN = "testm"
     DEVELOPER_TOKEN = "testd"
     PROCESS_TOKEN = "testp"
-    process_name = "create_text_number3"
+    process_name = "dev_create_text_number3"
     message = "Hello world 3!"
     
     Bowser_to_flask_app(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, message)
