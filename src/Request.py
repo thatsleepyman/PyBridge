@@ -10,7 +10,7 @@ def api_request(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, mess
             'process_name': process_name,
             'message': message}
     response = requests.post(url, json=data)
-    
+
     if response.status_code == 200:
         print(f"Status code: {response.status_code}\nResponse text: {response.text}")
     else:
@@ -18,11 +18,10 @@ def api_request(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, mess
 
 
 if __name__ == '__main__':
-    
     MASTER_TOKEN = "testm"
     DEVELOPER_TOKEN = "testd"
     PROCESS_TOKEN = "testp"
     process_name = "creator"
     message = "Hello world 36!"
-    
+
     api_request(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, message)
