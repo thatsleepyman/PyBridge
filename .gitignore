@@ -1,0 +1,8 @@
+# files
+*.log
+
+# directories
+.venv
+.idea
+__pycache__
+logs
