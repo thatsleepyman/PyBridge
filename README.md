@@ -1,8 +1,8 @@
-# Bowser_the_Pyrocess_Browser
+# PyBridge - Bridge to the other side
 
 ## Overview
 
-Bowser_the_Pyrocess_Browser is a Python-based Event-Driven Script Browser (ESB) designed to facilitate the execution of scripts based on various triggers such as timers, schedules, or API calls. This project, based on Flask, is currently a work in progress.
+PyBridge - Bridge to the other side is a Python-based Event-Driven Script PyBridge (ESB) designed to facilitate the execution of scripts based on various triggers such as timers, schedules, or API calls. This project, based on Flask, is currently a work in progress.
 
 ## Features
 
@@ -25,12 +25,12 @@ Ensure you have the following installed on your machine:
 
 1. Clone the repository
 ```cmd
-git clone https://github.com/thatsleepyman/Bowser_the_Pyrocess_Browser.git
+git clone https://github.com/thatsleepyman/PyBridge.git
 ```
 
 2. Navigate to the project directory
 ```cmd
-cd Bowser_the_Pyrocess_Browser
+cd PyBridge
 ```
 
 3. Install the required dependencies
@@ -38,7 +38,7 @@ cd Bowser_the_Pyrocess_Browser
 pip install -r requirements.txt
 ```
 ## Understanding Tokens
-- **MASTER_TOKEN:** Acts like a license key, granting the requestor the right to send requests to Bowser.
+- **MASTER_TOKEN:** Acts like a license key, granting the requestor the right to send requests to PyBridge.
 - **PROCESS_TOKEN:** Allows the requestor to send data to and trigger processes.
 - **DEVELOPER_TOKEN:** Used to change settings within Bowser, such as enabling or disabling processes.
 
