@@ -82,8 +82,7 @@ def PyBridge_dev():
 
     # Execute the appropriate script based on process name
     try:
-        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered',
-                                   'Developer_Tools', json_process_name, f'{json_process_name}.py')
+        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered', 'Developer_Tools', json_process_name, f'{json_process_name}.py')
         subprocess.run([python_path, script_path, message], check=True)
         app.logger.info(f"Process triggered successfully: {json_process_name}.py")
     except subprocess.CalledProcessError as e:
