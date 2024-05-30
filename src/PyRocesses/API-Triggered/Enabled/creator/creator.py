@@ -6,9 +6,9 @@ def process_message(message):
         print('Executing creator.py...')
         with open('creator.txt', 'w') as f:
             f.write(message)  # Write the sanitized message to the file
-        print('test_dev.txt created successfully.')
+        print('creator.txt created successfully.')
     except Exception as e:
-        print(f'Failed to create test_dev.txt: {e}')
+        print(f'Failed to create creator.txt: {e}')
 
 
 if __name__ == '__main__':

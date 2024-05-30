@@ -47,8 +47,7 @@ def PyBridge():
 
     # Execute the appropriate script based on pyrocess name
     try:
-        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered', 'Enabled',
-                                   json_PYROCESS_NAME, f'{json_PYROCESS_NAME}.py')
+        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered', 'Enabled', json_PYROCESS_NAME, f'{json_PYROCESS_NAME}.py')
         subprocess.run([python_path, script_path, html_san_MESSAGE], check=True)
         app.logger.info(f"PyRocess triggered successfully: {json_PYROCESS_NAME}.py")
     except subprocess.CalledProcessError as e:
@@ -87,8 +86,7 @@ def PyBridge_dev():
 
     # Execute the appropriate script based on pyrocess name
     try:
-        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered',
-                                   'Developer_Tools', json_PYROCESS_NAME, f'{json_PYROCESS_NAME}.py')
+        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered', 'Developer_Tools', json_PYROCESS_NAME, f'{json_PYROCESS_NAME}.py')
         subprocess.run([python_path, script_path, html_san_MESSAGE], check=True)
         app.logger.info(f"PyRocess triggered successfully: {json_PYROCESS_NAME}.py")
     except subprocess.CalledProcessError as e:
