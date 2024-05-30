@@ -11,7 +11,7 @@ def encrypt_password(password, encryption_key):
 
 def main():
     # Get input from the user
-    to_be_encrypted = "%^mb8Jr^E$mRLrdWKHe3HaW^w63D$&%bxa119ED8xQHhsj&nvRX7uhPNYpTM"
+    to_be_encrypted = "moksok"
 
     # Specify the encryption key you want to use
     encryption_key = b'mRl_Z5IfvcfhV-keSLXiAslYQI2Qa23X1Ru2jHoptoM='
