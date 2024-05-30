@@ -17,6 +17,6 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         message = sys.argv[1]
         response = process_message(message)
-        print(response)  # Return response to be captured by request.py
+        print(response)  # Return response to be captured by request_dev.py
     else:
         print("No message received.")

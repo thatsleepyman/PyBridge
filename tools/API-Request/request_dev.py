@@ -18,10 +18,10 @@ def api_request(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, mess
 
 
 if __name__ == '__main__':
-    MASTER_TOKEN = "testm"
-    DEVELOPER_TOKEN = "testd"
-    PROCESS_TOKEN = "testp"
-    process_name = "creator"
+    MASTER_TOKEN = "gAAAAABmWC2w38x80SOE57frQyEDkNyqL0YpATlU27XqDWk_oND9WrnmO6MQBU-RlaIXru5w5vkdjQa3_4wFvVkmWoUpeCmLzO7M_fojDi1_iU8IT6tgGEG0Gm-NwZOMO3rJxI7hl0FlmxHKZ1yDfDiYpWCSwHtYBQ=="
+    DEVELOPER_TOKEN = "gAAAAABmWC5b3452haW9-si6gzPSGfanKNWFa6xSP02y11kbR39nZJeQAjN2Ymnm9dTxN8F4-d4C8tR35iTsoiEtpEaIlYlDsf4R8dsVTfFe9IJ_cEwdKa_NlEnJh1-MoSg5Q5uCnv7Z1Gv9PjXd4gqP7L2p0BRQnQ=="
+    PROCESS_TOKEN = "gAAAAABmWC7AY5Ajea54eI1R58x427HC7y-HrSj5tOcFsTWtvYQEs1Pdn86uEzANteSzKOjHUuZHs9pOjuNtvxYmfQprkfz6tk2RGkVPESiixkXxmqeWzHMznl0mbucdUUCcTRESVN8XvgHccfuKtXzTZvw8IGGrLQ=="
+    process_name = "testcase"
     message = "Hello world 36!"
 
     api_request(MASTER_TOKEN, DEVELOPER_TOKEN, PROCESS_TOKEN, process_name, message)
