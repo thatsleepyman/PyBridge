@@ -3,7 +3,7 @@ import sys
 
 def process_message(message):
     try:
-        print('Executing creator2.py...')
+        print('Executing creator.py...')
         with open('creator_main.txt', 'w') as f:
             f.write(message)  # Write the sanitized message to the file
         print('creator_main.txt created successfully.')

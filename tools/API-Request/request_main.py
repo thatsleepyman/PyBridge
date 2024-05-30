@@ -3,7 +3,7 @@ import requests
 
 
 def api_request(MASTER_TOKEN, PYROCESS_TOKEN, PYROCESS_NAME, json_MESSAGE):
-    url = f'http://127.0.0.1:5000/PyBridge/{PYROCESS_NAME}'
+    url = f'http://127.0.0.1:5000/PyBridge/main/{PYROCESS_NAME}'
     data = {'MASTER_TOKEN': MASTER_TOKEN,
             'PYROCESS_TOKEN': PYROCESS_TOKEN,
             'json_MESSAGE': json_MESSAGE}

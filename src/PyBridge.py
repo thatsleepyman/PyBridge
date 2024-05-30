@@ -6,36 +6,52 @@ import subprocess
 from flask import Flask, request, abort
 import html
 import json
-from dotenv import load_dotenv
 
 # Initialize Flask app
 app = Flask(__name__)
-load_dotenv()
-
-# Get master, pyrocess and developer Tokens
-MASTER_TOKEN = os.getenv("MASTER_TOKEN")
-PYROCESS_TOKEN = os.getenv("PYROCESS_TOKEN")
-DEVELOPER_TOKEN = os.getenv("DEVELOPER_TOKEN")
 
 # Get the relative path to the Python interpreter
-python_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', '.venv', 'Scripts', 'python.exe')
+python_path = os.path.join(
+    os.getcwd()
+    , '..'
+    , '..'
+    , 'PyBridge'
+    , '.venv'
+    , 'Scripts'
+    , 'python.exe')
 
 
 # Main routing
-@app.route('/PyBridge/<string:PYROCESS_NAME>', methods=['POST'])
+@app.route('/PyBridge/main/<string:PYROCESS_NAME>', methods=['POST'])
 def PyBridge_main(PYROCESS_NAME):
+    # Load tokens from the JSON file
+    tokens_json_path = os.path.join(
+        os.getcwd()
+        , '..'
+        , '..'
+        , 'PyBridge'
+        , 'config'
+        , 'tokens.json')
+
+    with open(tokens_json_path) as f:
+        tokens = json.load(f)
+
+    MASTER_TOKEN = tokens['MASTER_TOKEN']
+    PYROCESS_TOKENS = tokens['PYROCESS_TOKENS']
+
     # Extract data from request
     json_MASTER_TOKEN = request.json.get('MASTER_TOKEN')
     json_PYROCESS_TOKEN = request.json.get('PYROCESS_TOKEN')
 
     # Validate inputs
-    if not all([json_MASTER_TOKEN, json_PYROCESS_TOKEN]):
+    if not all([json_MASTER_TOKEN
+                , json_PYROCESS_TOKEN]):
         app.logger.error("Invalid input")
         abort(400)  # Bad Request
 
     # Check for unauthorized access
     if (json_MASTER_TOKEN != MASTER_TOKEN
-            or json_PYROCESS_TOKEN != PYROCESS_TOKEN):
+            or json_PYROCESS_TOKEN != PYROCESS_TOKENS[PYROCESS_NAME]):
         app.logger.error("Unauthorized access attempt")
         abort(401)  # Unauthorized
 
@@ -45,7 +61,18 @@ def PyBridge_main(PYROCESS_NAME):
 
     # Execute the appropriate script based on pyrocess name
     try:
-        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered', 'Enabled', PYROCESS_NAME, f'{PYROCESS_NAME}.py')
+        script_path = os.path.join(
+            os.getcwd()
+            , '..'
+            , '..'
+            , 'PyBridge'
+            , 'src'
+            , 'PyRocesses'
+            , 'API-Triggered'
+            , 'Enabled'
+            , PYROCESS_NAME
+            , f'{PYROCESS_NAME}.py')
+
         subprocess.run([python_path, script_path, html_san_MESSAGE], check=True)
         app.logger.info(f"PyRocess triggered successfully: {PYROCESS_NAME}.py")
     except subprocess.CalledProcessError as e:
@@ -58,6 +85,22 @@ def PyBridge_main(PYROCESS_NAME):
 # Developer routing
 @app.route('/PyBridge/dev/<string:PYROCESS_NAME>', methods=['POST'])
 def PyBridge_dev(PYROCESS_NAME):
+    # Load tokens from the JSON file
+    tokens_json_path = os.path.join(
+        os.getcwd()
+        , '..'
+        , '..'
+        , 'PyBridge'
+        , 'config'
+        , 'tokens.json')
+
+    with open(tokens_json_path) as f:
+        tokens = json.load(f)
+
+    MASTER_TOKEN = tokens['MASTER_TOKEN']
+    DEVELOPER_TOKEN = tokens['DEVELOPER_TOKEN']
+    PYROCESS_TOKENS = tokens['PYROCESS_TOKENS']
+
     # Extract data from request
     json_MASTER_TOKEN = request.json.get('MASTER_TOKEN')
     json_DEVELOPER_TOKEN = request.json.get('DEVELOPER_TOKEN')
@@ -73,7 +116,7 @@ def PyBridge_dev(PYROCESS_NAME):
     # Check for unauthorized access
     if (json_MASTER_TOKEN != MASTER_TOKEN
             or json_DEVELOPER_TOKEN != DEVELOPER_TOKEN
-            or json_PYROCESS_TOKEN != PYROCESS_TOKEN):
+            or json_PYROCESS_TOKEN != PYROCESS_TOKENS[PYROCESS_NAME]):
         app.logger.error("Unauthorized access attempt")
         abort(401)  # Unauthorized
 
@@ -83,7 +126,18 @@ def PyBridge_dev(PYROCESS_NAME):
 
     # Execute the appropriate script based on pyrocess name
     try:
-        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered', 'Developer_Tools', PYROCESS_NAME, f'{PYROCESS_NAME}.py')
+        script_path = os.path.join(
+            os.getcwd()
+            , '..'
+            , '..'
+            , 'PyBridge'
+            , 'src'
+            , 'PyRocesses'
+            , 'API-Triggered'
+            , 'Developer_Tools'
+            , PYROCESS_NAME
+            , f'{PYROCESS_NAME}.py')
+
         subprocess.run([python_path, script_path, html_san_MESSAGE], check=True)
         app.logger.info(f"PyRocess triggered successfully: {PYROCESS_NAME}.py")
     except subprocess.CalledProcessError as e:
@@ -97,7 +151,14 @@ def PyBridge_dev(PYROCESS_NAME):
 @app.route('/PyBridge/test/<string:PYROCESS_NAME>', methods=['POST'])
 def PyBridge_test(PYROCESS_NAME):
     # Load tokens from the JSON file
-    tokens_json_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'config', 'tokens.json')
+    tokens_json_path = os.path.join(
+        os.getcwd()
+        , '..'
+        , '..'
+        , 'PyBridge'
+        , 'config'
+        , 'tokens.json')
+
     with open(tokens_json_path) as f:
         tokens = json.load(f)
 
@@ -111,7 +172,9 @@ def PyBridge_test(PYROCESS_NAME):
     json_PYROCESS_TOKEN = request.json.get('PYROCESS_TOKEN')
 
     # Validate inputs
-    if not all([json_MASTER_TOKEN, json_TESTER_TOKEN, json_PYROCESS_TOKEN]):
+    if not all([json_MASTER_TOKEN
+                , json_TESTER_TOKEN
+                , json_PYROCESS_TOKEN]):
         app.logger.error("Invalid input")
         abort(400)  # Bad Request
 
@@ -128,7 +191,18 @@ def PyBridge_test(PYROCESS_NAME):
 
     # Execute the appropriate script based on pyrocess name
     try:
-        script_path = os.path.join(os.getcwd(), '..', '..', 'PyBridge', 'src', 'PyRocesses', 'API-Triggered', 'Test', PYROCESS_NAME, f'{PYROCESS_NAME}.py')
+        script_path = os.path.join(
+            os.getcwd()
+            , '..'
+            , '..'
+            , 'PyBridge'
+            , 'src'
+            , 'PyRocesses'
+            , 'API-Triggered'
+            , 'Test'
+            , PYROCESS_NAME
+            , f'{PYROCESS_NAME}.py')
+
         subprocess.run([python_path, script_path, html_san_MESSAGE], check=True)
         app.logger.info(f"PyRocess triggered successfully: {PYROCESS_NAME}.py")
     except subprocess.CalledProcessError as e:
