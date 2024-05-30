@@ -7,6 +7,7 @@ from flask import Flask, request, abort
 import html
 import json
 
+
 # Initialize Flask app
 app = Flask(__name__)
 
@@ -37,20 +38,24 @@ def PyBridge_main(PYROCESS_NAME):
         tokens = json.load(f)
 
     MASTER_TOKEN = tokens['MASTER_TOKEN']
+    USER_TOKEN = tokens['USER_TOKEN']
     PYROCESS_TOKENS = tokens['PYROCESS_TOKENS_MAIN']
 
     # Extract data from request
     json_MASTER_TOKEN = request.json.get('MASTER_TOKEN')
+    json_USER_TOKEN = request.json.get('USER_TOKEN')
     json_PYROCESS_TOKEN = request.json.get('PYROCESS_TOKEN')
 
     # Validate inputs
     if not all([json_MASTER_TOKEN
+                , json_USER_TOKEN
                 , json_PYROCESS_TOKEN]):
         app.logger.error("Invalid input")
         abort(400)  # Bad Request
 
     # Check for unauthorized access
     if (json_MASTER_TOKEN != MASTER_TOKEN
+            or json_USER_TOKEN != USER_TOKEN
             or json_PYROCESS_TOKEN != PYROCESS_TOKENS[PYROCESS_NAME]):
         app.logger.error("Unauthorized access attempt")
         abort(401)  # Unauthorized
