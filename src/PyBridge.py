@@ -37,7 +37,7 @@ def PyBridge_main(PYROCESS_NAME):
         tokens = json.load(f)
 
     MASTER_TOKEN = tokens['MASTER_TOKEN']
-    PYROCESS_TOKENS = tokens['PYROCESS_TOKENS']
+    PYROCESS_TOKENS = tokens['PYROCESS_TOKENS_MAIN']
 
     # Extract data from request
     json_MASTER_TOKEN = request.json.get('MASTER_TOKEN')
@@ -99,7 +99,7 @@ def PyBridge_dev(PYROCESS_NAME):
 
     MASTER_TOKEN = tokens['MASTER_TOKEN']
     DEVELOPER_TOKEN = tokens['DEVELOPER_TOKEN']
-    PYROCESS_TOKENS = tokens['PYROCESS_TOKENS']
+    PYROCESS_TOKENS = tokens['PYROCESS_TOKENS_DEV']
 
     # Extract data from request
     json_MASTER_TOKEN = request.json.get('MASTER_TOKEN')
@@ -164,7 +164,7 @@ def PyBridge_test(PYROCESS_NAME):
 
     MASTER_TOKEN = tokens['MASTER_TOKEN']
     TESTER_TOKEN = tokens['TESTER_TOKEN']
-    PYROCESS_TOKENS = tokens['PYROCESS_TOKENS']
+    PYROCESS_TOKENS = tokens['PYROCESS_TOKENS_TEST']
 
     # Extract data from request
     json_MASTER_TOKEN = request.json.get('MASTER_TOKEN')
