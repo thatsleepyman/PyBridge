@@ -32,7 +32,7 @@ def PyBridge_main(PYROCESS_NAME):
         , '..'
         , 'PyBridge'
         , 'config'
-        , 'tokens.json')
+        , 'tokens_main.json')
 
     with open(tokens_json_path) as f:
         tokens = json.load(f)
@@ -97,7 +97,7 @@ def PyBridge_dev(PYROCESS_NAME):
         , '..'
         , 'PyBridge'
         , 'config'
-        , 'tokens.json')
+        , 'tokens_dev.json')
 
     with open(tokens_json_path) as f:
         tokens = json.load(f)
@@ -162,7 +162,7 @@ def PyBridge_test(PYROCESS_NAME):
         , '..'
         , 'PyBridge'
         , 'config'
-        , 'tokens.json')
+        , 'tokens_test.json')
 
     with open(tokens_json_path) as f:
         tokens = json.load(f)
