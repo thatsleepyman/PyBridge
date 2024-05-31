@@ -38,9 +38,11 @@ cd PyBridge
 pip install -r requirements.txt
 ```
 ## Understanding Tokens
-- **MASTER_TOKEN:** Acts like a license key, granting the requestor the right to send requests to PyBridge.
-- **PROCESS_TOKEN:** Allows the requestor to send data to and trigger PyRocesses.
-- **DEVELOPER_TOKEN:** Used to change settings within PyBridge, such as enabling or disabling processes.
+- **MASTER_TOKEN:** Acts like a license key, granting the requestor the right to send requests to PyBridge
+- **PYROCESS_TOKEN:** Allows the requestor to send data to and trigger PyRocesses
+- **DEVELOPER_TOKEN:** Used by 'Developers' to trigger PyRocesses through the ``{ip}:{port}/PyBridge/dev/{PyRocess}`` routing
+- **USER_TOKEN:** Used by 'Users' to trigger PyRocesses through the ``{ip}:{port}/PyBridge/main/{PyRocess}`` routing
+- **TESTER_TOKEN:** Used by 'Testers' to trigger PyRocesses through the ``{ip}:{port}/PyBridge/test/{PyRocess}`` routing
 
 ## Note
 PyBridge assumes that there is a **'.venv'** directory in the root directory of the project ('PyBridge/.venv'). Please create one and install the Python modules there. Once the '.venv' is placed in the root directory, you can move PyBridge anywhere you wish.
