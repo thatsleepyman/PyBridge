@@ -18,7 +18,7 @@ PyBridge - Bridge to the other side, is a Python-based Event-Driven Script PyBri
 Ensure you have the following installed on your machine:
 
 - Python 3.x
-- Install the required dependencies listed below
+- Install the required dependencies with the method listed below
 
 
 ### Installation
