@@ -46,7 +46,7 @@ pip install -r requirements.txt
 - **TESTER_TOKEN:** Used by 'Testers' to trigger PyRocesses through the ``{ip}:{port}/PyBridge/test/{PyRocess}`` routing
 
 ## Note
-PyBridge assumes that there is a **'.venv'** directory in the root directory of the project ('PyBridge/.venv'). Please create one and install the Python modules there. Once the '.venv' is placed in the root directory, you can move PyBridge anywhere you wish.
+PyBridge assumes that there is a **'.venv'** directory in the root directory of the project ('PyBridge/.venv'). Please create one and install the Python modules there. If you prefer to not use a '.venv', then you'll have to slightly tweak the code.
 
 ## License
 This project is licensed under the MIT License - Feel free to use it as you wish, however some credit for this project would be nice if you end up using it ;)
