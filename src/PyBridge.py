@@ -22,6 +22,9 @@ python_path = os.path.join(
     , 'python.exe')
 
 
+#TODO add broker and pyrocess logging
+#TODO add check to pyrocess .env whether or not proces is allowed to run and give error if disabled
+
 # Main routing
 @app.route('/PyBridge/main/<string:PYROCESS_NAME>', methods=['POST'])
 def PyBridge_main(PYROCESS_NAME):
@@ -74,7 +77,7 @@ def PyBridge_main(PYROCESS_NAME):
             , 'src'
             , 'PyRocesses'
             , 'API-Triggered'
-            , 'Enabled'
+            , 'main'
             , PYROCESS_NAME
             , f'{PYROCESS_NAME}.py')
 
@@ -139,7 +142,7 @@ def PyBridge_dev(PYROCESS_NAME):
             , 'src'
             , 'PyRocesses'
             , 'API-Triggered'
-            , 'Developer_Tools'
+            , 'dev'
             , PYROCESS_NAME
             , f'{PYROCESS_NAME}.py')
 
@@ -152,7 +155,7 @@ def PyBridge_dev(PYROCESS_NAME):
     return f"Message received and triggered {PYROCESS_NAME}", 200
 
 
-# Test routing
+# test routing
 @app.route('/PyBridge/test/<string:PYROCESS_NAME>', methods=['POST'])
 def PyBridge_test(PYROCESS_NAME):
     # Load tokens from the JSON file
@@ -204,7 +207,7 @@ def PyBridge_test(PYROCESS_NAME):
             , 'src'
             , 'PyRocesses'
             , 'API-Triggered'
-            , 'Test'
+            , 'test'
             , PYROCESS_NAME
             , f'{PYROCESS_NAME}.py')
 
