@@ -6,8 +6,6 @@ PyBridge - Bridge to the other side, is a Python-based Event-Driven Script PyBri
 
 ## Features
 
-- **Timer Intervals:** Execute scripts at regular intervals
-- **Schedules:** Run scripts according to a predefined schedule
 - **API Triggers:** Trigger script execution through API calls
 - **Tokens:** Control execution rights
 
@@ -33,7 +31,7 @@ git clone https://github.com/thatsleepyman/PyBridge.git
 cd PyBridge
 ```
 
-3. Install the required dependencies
+3. Install the required dependencies in 'PyBridge/.venv'
 ```cmd
 pip install -r requirements.txt
 ```
@@ -49,4 +47,4 @@ pip install -r requirements.txt
 PyBridge assumes that there is a **'.venv'** directory in the root directory of the project ('PyBridge/.venv'). Please create one and install the Python modules there. If you prefer to not use a '.venv', then you'll have to slightly tweak the code.
 
 ## License
-This project is licensed under the MIT License - Feel free to use it as you wish, however some credit for this project would be nice if you end up using it ;)
+This project is licensed under the MIT License - Feel free to use it as you wish.
