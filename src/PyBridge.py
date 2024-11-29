@@ -1,8 +1,6 @@
-# Standard library imports
+# Import Modules
 import os
 import subprocess
-
-# Third-party imports
 from flask import Flask, request, abort
 import html
 import json
@@ -10,6 +8,7 @@ import json
 
 # Initialize Flask app
 app = Flask(__name__)
+
 
 # Get the relative path to the Python interpreter
 python_path = os.path.join(
@@ -21,9 +20,6 @@ python_path = os.path.join(
     , 'Scripts'
     , 'python.exe')
 
-
-#TODO add broker and pyrocess logging
-#TODO add check to pyrocess .env whether or not proces is allowed to run and give error if disabled
 
 # Main routing
 @app.route('/PyBridge/main/<string:PYROCESS_NAME>', methods=['POST'])
@@ -222,4 +218,4 @@ def PyBridge_test(PYROCESS_NAME):
 
 # Run the Flask app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
